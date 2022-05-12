@@ -29,13 +29,18 @@ const FilmContainer = () => {
         setFavouriteArray(newArray)
     }
     
+    const favoriteFilmNodes = favouriteArray.map((item) => {
+        return ( <li>{item}</li>
+        )
+    })
+    
 
     return (
         <>
          <h1>Studio Ghibli</h1>
             <h2>Favourite List
             </h2>
-            {favouriteArray}
+            {favoriteFilmNodes}
             <FilmList films={films} onFilmClick={onFilmClick} selectedFilm={selectedFilm} onButtonClick={onButtonClick} favouriteArray={favouriteArray}/>
             {selectedFilm ? <FilmDetail selectedFilm={selectedFilm}></FilmDetail> : null }
         </>

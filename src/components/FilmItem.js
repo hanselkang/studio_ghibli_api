@@ -10,7 +10,6 @@ const FilmItem = ({ film, onFilmClick, onButtonClick, favouriteArray }) => {
     const handleFavourite = (event) => {
 
         onButtonClick(event.target.value)
-
     }
 
     return (
